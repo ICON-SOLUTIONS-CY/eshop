@@ -111,7 +111,7 @@ class HeaderWidget extends StatelessWidget {
                 const CircleAvatar(
                   radius: 25,
                   backgroundImage: AssetImage(
-                    'assets/images/avatar/jpg',
+                    'assets/images/avatar.jpg',
                   ),
                 ),
               ],
