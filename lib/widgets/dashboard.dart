@@ -41,7 +41,7 @@ class _DashboardState extends State<Dashboard> {
                         horizontal: size.width * 0.05
                     ),
                     child: SizedBox(
-                      height: 50,
+                      height: 56,
                       width: size.width,
                       child: ListView.builder(
                         itemCount: categoryList.length,
@@ -60,8 +60,14 @@ class _DashboardState extends State<Dashboard> {
                             ),
                             child: Column(
                               children: [
-                                SvgPicture.asset(
+                                /*SvgPicture.asset(
                                   categoryList[index]['icon'],
+                                ),*/
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Text(
+                                  categoryList[index]['title'],
                                 ),
                               ],
                             ),
