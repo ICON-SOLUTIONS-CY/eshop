@@ -2,8 +2,9 @@ import 'package:eshop/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
+
 import '../constant/data.dart';
-import '../provider/providerState.dart';
+import '../provider/provider_state.dart';
 
 class CategoryHeader extends StatelessWidget {
 
@@ -25,8 +26,11 @@ class CategoryHeader extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 physics: const ScrollPhysics(),
                 itemBuilder: (_, index) => GestureDetector(
-                  onTap: (){
-                    selectedIndex = Provider.of<StateProvider>(context, listen: false).changeNum(index);
+                  onTap: () {
+                    selectedIndex = Provider.of<StateProvider>(
+                        context,
+                        listen: false
+                    ).changeNum(index);
                   },
                   child: Container(
                       width: 144,
@@ -34,9 +38,9 @@ class CategoryHeader extends StatelessWidget {
                       margin: const EdgeInsets.symmetric(horizontal: 3),
                       decoration: BoxDecoration(
                           color: selectedIndex == index
-                              ? Color(0xFFEBF2FF)
+                              ? const Color(0xFFEBF2FF)
                               : Colors.white,
-                          borderRadius: BorderRadius.all(
+                          borderRadius: const BorderRadius.all(
                             Radius.circular(15),
                           )
                       ),
@@ -56,11 +60,11 @@ class CategoryHeader extends StatelessWidget {
                                 color: Color(0xFF2979FF),
                                 fontWeight: FontWeight.w500,
                                 fontSize: 14,
-                              ),
-                            ),
+                              )
+                            )
                           ]
                       )
-                  ),
+                  )
                 )
             )
         )

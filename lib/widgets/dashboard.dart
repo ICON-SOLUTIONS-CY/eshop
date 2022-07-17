@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'categoryHeader.dart';
+
+import 'category_header.dart';
 import 'header.dart';
 
 class Dashboard extends StatefulWidget {
