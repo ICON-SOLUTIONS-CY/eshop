@@ -2,7 +2,6 @@ import 'package:eshop/utils/extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
-
 import '../constant/data.dart';
 import '../provider/provider_state.dart';
 
@@ -49,13 +48,13 @@ class CategoryHeader extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             SvgPicture.asset(
-                              categoryList[index]['icon'],
+                              categoryList[index].icon,
                             ),
                             const SizedBox(
                               height: 5,
                             ),
                             Text(
-                              categoryList[index]['title'],
+                              categoryList[index].title,
                               style: const TextStyle(
                                 color: Color(0xFF2979FF),
                                 fontWeight: FontWeight.w500,
