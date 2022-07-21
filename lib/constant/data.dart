@@ -1,86 +1,92 @@
-List<Map<String, dynamic>> extraFilter = [
-  {
-    "title": "Recommended",
-    "is_selected": false,
-  },
-  {
-    "title": "Recently Added",
-    "is_selected": false,
-  },
-  {
-    "title": "Most Rated",
-    "is_selected": false,
-  },
-  {
-    "title": "Expiring Soon",
-    "is_selected": false,
-  },
-  {
-    "title": "Most Rated",
-    "is_selected": false,
-  },
-  {
-    "title": "Price: Low → High",
-    "is_selected": false,
-  },
-  {
-    "title": "Price: High → Low",
-    "is_selected": false,
-  },
+import 'package:eshop/constant/models/category_list.dart';
+import 'package:eshop/constant/models/side_bar_category_list.dart';
+import 'models/extra_filter.dart';
+import 'models/product_list.dart';
+
+List<ExtraFilter> extraFilter = [
+  ExtraFilter(
+    "Recommended",
+    false,
+  ),
+  ExtraFilter(
+    "Recently Added",
+    false,
+  ),
+  ExtraFilter(
+    "Most Rated",
+    false,
+  ),
+  ExtraFilter(
+    "Expiring Soon",
+    false,
+  ),
+  ExtraFilter(
+    "Most Rated",
+    false,
+  ),
+  ExtraFilter(
+    "Price: Low → High",
+    false,
+  ),
+  ExtraFilter(
+    "Price: High → Low",
+    false,
+  ),
 ];
 
-List<Map<String, dynamic>> categoryList = [
-  {
-    'title': 'Clothing & Shoes',
-    'icon': 'assets/icons/svg/hanger.svg',
-  },
-  {
-    'title': 'Entertainment',
-    'icon': 'assets/icons/svg/cinema.svg',
-  },
-  {
-    'title': 'Music',
-    'icon': 'assets/icons/svg/concert.svg',
-  },
-  {
-    'title': 'Sport & Lifestyle',
-    'icon': 'assets/icons/svg/fitness.svg',
-  },
-  {
-    'title': 'Pets',
-    'icon': 'assets/icons/svg/pets.svg',
-  },
-  {
-    'title': 'Kitchen Accessories',
-    'icon': 'assets/icons/svg/restaraunt.svg',
-  },
-  {
-    'title': 'Travel Equipment',
-    'icon': 'assets/icons/svg/observation.svg',
-  },
-  {
-    'title': 'Growing & Garden',
-    'icon': 'assets/icons/svg/barley.svg',
-  },
-  {
-    'title': 'Electrical Tools',
-    'icon': 'assets/icons/svg/Vector.svg',
-  },
-  {
-    'title': 'Mother Care',
-    'icon': 'assets/icons/svg/babysitter.svg',
-  },
+List<CategoryList> categoryList = [
+  CategoryList(
+    'Clothing & Shoes',
+    'assets/icons/svg/hanger.svg',
+  ),
+  CategoryList(
+    'Entertainment',
+    'assets/icons/svg/cinema.svg',
+  ),
+  CategoryList(
+    'Music',
+    'assets/icons/svg/concert.svg',
+  ),
+  CategoryList(
+    'Sport & Lifestyle',
+    'assets/icons/svg/fitness.svg',
+  ),
+  CategoryList(
+    'Pets',
+    'assets/icons/svg/pets.svg',
+  ),
+  CategoryList(
+    'Kitchen Accessories',
+    'assets/icons/svg/restaraunt.svg',
+  ),
+  CategoryList(
+    'Travel Equipment',
+    'assets/icons/svg/observation.svg',
+  ),
+  CategoryList(
+    'Growing & Garden',
+    'assets/icons/svg/barley.svg',
+  ),
+  CategoryList(
+    'Electrical Tools',
+    'assets/icons/svg/Vector.svg',
+  ),
+  CategoryList(
+    'Mother Care',
+    'assets/icons/svg/babysitter.svg',
+  ),
 ];
 
-List<Map<String, dynamic>> sideBarCategoryList = [
-  {
-    "title": "All Categories",
-    "subtitle": "Ecommerce patterns",
-    "sub_category": <String>[],
-  },
-  {
-    "title": "Electronics",
-    "sub_category": <String>[
+List<SideBarCategory> sideBarCategoryList = [
+  SideBarCategory(
+    "All Categories",
+    "Ecommerce patterns",
+    <String>[],
+  ),
+  SideBarCategory(
+    "Electronics",
+    "",
+    <String>[
       'Cell Phones & Smartphones',
       'Cell Phone Accessories',
       'Apllications',
@@ -91,28 +97,27 @@ List<Map<String, dynamic>> sideBarCategoryList = [
       'Desktop',
       'Wall Clock'
     ],
-    "subtitle": ""
-  },
-  {
-    "title": "Business & Industrial",
-    "subtitle": "",
-    "sub_category": <String>[],
-  },
-  {
-    "title": "Computers",
-    "subtitle": "Tablets & Networking",
-    "sub_category": <String>[],
-  },
-  {
-    "title": "Consumer Electronics",
-    "subtitle": "",
-    "sub_category": <String>[],
-  },
-  {
-    "title": "Home & Garden",
-    "subtitle": "",
-    "sub_category": <String>[],
-  }
+  ),
+  SideBarCategory(
+    "Business & Industrial",
+    "",
+    <String>[],
+  ),
+  SideBarCategory(
+    "Computers",
+    "Tablets & Networking",
+    <String>[],
+  ),
+  SideBarCategory(
+    "Consumer Electronics",
+    "",
+    <String>[],
+  ),
+  SideBarCategory(
+    "Home & Garden",
+    "",
+    <String>[],
+  )
 ];
 
 List<String> relatedKeyword = [
@@ -123,97 +128,89 @@ List<String> relatedKeyword = [
   'shoes'
 ];
 
-List<Map<String, dynamic>> productList = [
-  {
-    "title":
+List<ProductList> productList = [
+  ProductList(
     "Vintage Typewriter to post awesome stories about UI design and webdev.",
-    "price": "\$49.50",
-    "image": "assets/images/writter.png",
-    "rating": 4.05,
-    "favorite": false
-  },
-  {
-    "title":
+    "\$49.50",
+    "assets/images/writter.png",
+    4.05,
+    false,
+  ),
+  ProductList(
     "Lee Pucker design. Leather botinki for handsome designers. Free shipping.",
-    "price": "\$13.95",
-    "image": "assets/images/shoe.png",
-    "rating": 4.5,
-    "favorite": false
-  },
-  {
-    "title":
+    "\$13.95",
+    "assets/images/shoe.png",
+    4.5,
+    false,
+  ),
+  ProductList(
     "Timesaving kitten to save months on development. Playful, cute, cheap!",
-    "price": "\$498.50",
-    "image": "assets/images/kitty.png",
-    "rating": 2.05,
-    "favorite": false
-  },
-  {
-    "title":
+    "\$498.50",
+    "assets/images/kitty.png",
+    2.05,
+    false,
+  ),
+  ProductList(
     "Plastic useless plugs and tubes for high-fidelity prototyping. Fit & Eat!",
-    "price": "\$19.50",
-    "image": "assets/images/box.png",
-    "rating": 4.9,
-    "favorite": false
-  },
-  {
-    "title":
+    "\$19.50",
+    "assets/images/box.png",
+    4.9,
+    false,
+  ),
+  ProductList(
     "Creativity stimulating lotion. Drink every morning to generate better ideas!",
-    "price": "\$89.50",
-    "image": "assets/images/lotion.png",
-    "rating": 5.0,
-    "favorite": false
-  },
-  {
-    "title": "Prototyping items to create a lot if useless things...",
-    "price": "\$39.50",
-    "image": "assets/images/card.png",
-    "rating": 5.0,
-    "favorite": false
-  },
-  {
-    "title": "John Von Ebalkin SPRING ",
-    "price": "\$9.50",
-    "image": "assets/images/jeans.png",
-    "rating": 3.9,
-    "favorite": false
-  },
-  {
-    "title":
+    "\$89.50",
+    "assets/images/lotion.png",
+    5.0,
+    false,
+  ),
+  ProductList(
+    "Prototyping items to create a lot if useless things...",
+    "\$39.50",
+    "assets/images/card.png",
+    5.0,
+    false,
+  ),
+  ProductList(
+    "John Von Ebalkin SPRING ",
+    "\$9.50",
+    "assets/images/jeans.png",
+    3.9,
+    false,
+  ),
+  ProductList(
     "Envelope, Stripes, Pencil and etc. Purchase this kit today and feel OKAY",
-    "price": "\$133.50",
-    "image": "assets/images/gift.png",
-    "rating": 4.9,
-    "favorite": false
-  },
-  {
-    "title": "Professional teadrinking set for every designer and developer",
-    "price": "\$49.50",
-    "image": "assets/images/kitchen.png",
-    "rating": 3.05,
-    "favorite": false
-  },
-  {
-    "title": "One string Bonsai description",
-    "price": "\$69.50",
-    "image": "assets/images/plant.png",
-    "rating": 5.0,
-    "favorite": false
-  },
-  {
-    "title":
+    "\$133.50",
+    "assets/images/gift.png",
+    4.9,
+    false,
+  ),
+  ProductList(
+    "Professional teadrinking set for every designer and developer",
+    "\$49.50",
+    "assets/images/kitchen.png",
+    3.05,
+    false,
+  ),
+  ProductList(
+    "One string Bonsai description",
+    "\$69.50",
+    "assets/images/plant.png",
+    5.0,
+    false,
+  ),
+  ProductList(
     "Simply best item in town to shine bright with your Nine Inch Nails",
-    "price": "\$79.50",
-    "image": "assets/images/cosmetic.png",
-    "rating": 1.0,
-    "favorite": false
-  },
-  {
-    "title":
+    "\$79.50",
+    "assets/images/cosmetic.png",
+    1.0,
+    false,
+  ),
+  ProductList(
     "KISTOCHKI & KRASIBO. Top cosmetics brand from Chelyabinsk is here!",
-    "price": "\$21.50",
-    "image": "assets/images/brush.png",
-    "rating": 1.5,
-    "favorite": false
-  },
+    "\$21.50",
+    "assets/images/brush.png",
+    1.5,
+    false,
+  ),
 ];
