@@ -1,5 +1,7 @@
+import 'package:eshop/provider/provider_state.dart';
 import 'package:eshop/widgets/dashboard.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const App());
@@ -9,8 +11,15 @@ class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
   @override
-  build(context) => const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: Dashboard(),
+  build(context) => MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+          create: (context) => StateProvider(),
+      ),
+    ],
+    child: const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Dashboard(),
+    ),
   );
 }

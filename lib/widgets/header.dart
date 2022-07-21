@@ -1,5 +1,5 @@
 import 'package:eshop/utils/extensions.dart';
-import 'package:eshop/widgets/customButton.dart';
+import 'package:eshop/widgets/custom_button.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -88,14 +88,14 @@ class HeaderWidget extends StatelessWidget {
             children: [
               CustomButton(
                 title: 'Sign in',
-                onTapFunction: () {},
+                onTap: () {},
               ),
               const SizedBox(
                 width: 10,
               ),
               CustomButton(
                 title: 'My cart',
-                onTapFunction: () {
+                onTap: () {
                   //TODO
                 }
               ),
